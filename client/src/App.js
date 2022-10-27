@@ -1,14 +1,14 @@
 import {Helmet} from 'react-helmet'
-import {Switch, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Home from './Home';
 import Search from './Search'
 
 function App() {
   return (
-    <Switch>
+    <Routes>
       <Route exact path ="/" component = {Home}/>
       <Route exact path ="/search" component = {Search}/>
-    </Switch>
+    </Routes>
 
   );
 }
