@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
 const pool = require('./Pool');
-const cookieParser = require('cookie-parser')
 const cors = require('cors');
 //routes
 
