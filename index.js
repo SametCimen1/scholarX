@@ -13,13 +13,15 @@ const io = new Server(server);
 
 
 const corsOptions ={
-  origin:'http://localhost:3000', 
+  origin:'https://scholarshipx.herokuapp.com/', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
 
 
 
+app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static("./client/build"));
 
 
 app.use(cors(corsOptions))
@@ -28,7 +30,7 @@ app.use(cookieParser())
 app.use(express.urlencoded({extended: false}))
 app.use(bodyParser.json());
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'https://scholarshipx.herokuapp.com/');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
