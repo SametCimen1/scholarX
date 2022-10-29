@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css'
-import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 
@@ -17,8 +16,8 @@ render(
   <BrowserRouter>
   <Routes>
 
-      <Route index element={<Home />} />
-      <Route path="search" element={<Search />}></Route>
+      <Route path = "/" element={<Home />} />
+      <Route path="/search" element={<Search />}></Route>
       
 
   </Routes>
