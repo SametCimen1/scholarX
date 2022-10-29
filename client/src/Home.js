@@ -1,6 +1,7 @@
 import {Helmet} from 'react-helmet'
 import './homePageStyle.css'
 import {useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return(
@@ -17,16 +18,16 @@ export default function Home() {
         <div>
           <nav>
             <ul  class = "ulFlex">
-            <li><a href = "/" class = "noDec">Home</a></li>
-              <li><a href = "/" class = "noDec">About</a></li>
-              <li><a href = "/" class = "noDec">Service</a></li>
+            <li><Link to = "/" class = "noDec">Home</Link></li>
+              <li><Link to = "/" class = "noDec">About</Link></li>
+              <li><Link to = "/" class = "noDec">Service</Link></li>
             </ul>
           </nav>
         </div>
 
 
         <div>
-          <a href ="/search"><button>Try For Free!</button></a>
+          <Link to ="/search"><button>Try For Free!</button></Link>
         </div>
 
       </header>
@@ -36,7 +37,7 @@ export default function Home() {
           <h1>Find an affordable path to college using  Scholar<span class= "blackX">X</span>.</h1>
           <p>Looking for college scholarships can be hard. That’s why we are here. </p>
           <div>
-            <a href ="/search"><button>Try For Free!</button></a>
+            <Link to ="/search"><button>Try For Free!</button></Link>
           </div>
         </div>
 
@@ -183,7 +184,7 @@ export default function Home() {
           <h1>Database of <span class= "blackX">vetted</span> scholarships.</h1>
           <p>We find and evalute scholarships so you don’t have to. </p>
           <div>
-            <a href ="/search"><a href ="/search"><button>Try For Free!</button></a></a>
+          <Link to ="/search"><button>Try For Free!</button></Link>
           </div>
         </div>
       </div>
