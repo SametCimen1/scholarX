@@ -1,15 +1,18 @@
-import {Routes, Route} from 'react-router-dom';
+import { render } from "react-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Home from './Home';
 import Search from './Search'
 
 function App() {
   return (
-    <Routes>
-      <Route exact path ="/" component = {Home}/>
-      <Route exact path ="/search" component = {Search}/>
-    </Routes>
-
-  );
+        <div>
+          <h1>Application page, if you are seeing this please email to cimensamet338@gmail.com</h1>
+        </div>
+  );  
 }
 
 export default App;

@@ -1,14 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css'
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 
-ReactDOM.render(
+import { render } from "react-dom";
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './Home';
+import Search from './Search'
+
+
+render(
   <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Routes>
+
+      <Route index element={<Home />} />
+      <Route path="search" element={<Search />}></Route>
+      
+
+  </Routes>
+</BrowserRouter>,
   document.getElementById('root')
 );
 
