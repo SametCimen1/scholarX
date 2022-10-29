@@ -8,7 +8,7 @@ export default function Search() {
 
 
     const getDefault = async()=>{
-        const data = await fetch ("http://localhost:5000/default")
+        const data = await fetch ("/default")
         const res = await data.json();
         setScholarships(res);
     }
@@ -21,7 +21,7 @@ export default function Search() {
         alert("Please enter an input")
       }
       else{
-        const data = await fetch('http://localhost:5000/getScholarShips', {
+        const data = await fetch('/getScholarShips', {
           method:"POST",
           headers: {
               'Content-Type': 'application/json'
