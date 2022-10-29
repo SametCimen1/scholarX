@@ -23,7 +23,6 @@ app.use(express.static("./client/build"));
 
 app.use(cors(corsOptions))
 require('dotenv').config();
-app.use(cookieParser())
 app.use(express.urlencoded({extended: false}))
 app.use(bodyParser.json());
 app.use((req, res, next) => {
